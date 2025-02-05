@@ -8,13 +8,9 @@ function getHumanChoice () {
   let computerScore = 0;
 
   while (humanScore < 5 && computerScore < 5){
-    
 
-  
-  
   let choice = prompt("Chose: Rock paper or scissors").toLowerCase();
 
-  
   if (!["rock", "paper", "scissors"].includes(choice)) {
     console.log("Invalid choice. Please choose rock, paper, or scissors.");
     return;
@@ -47,12 +43,5 @@ function getHumanChoice () {
     console.log("Winner is computer");
 
   }
-
-
 }
 }
-/* for (let i = 0; humanScore <=5; i++){
-  console.log("");
-
-}
- */
