@@ -3,6 +3,14 @@
     return choices[Math.floor(Math.random() * 3)];
 }
 function getHumanChoice () {
+
+  let humanScore = 0;
+  let computerScore = 0;
+
+  while (humanScore < 5 && computerScore < 5){
+    
+
+  
   
   let choice = prompt("Chose: Rock paper or scissors").toLowerCase();
 
@@ -15,7 +23,7 @@ function getHumanChoice () {
   let computerChoice = getRandomChoice();
 
   console.log(`You chose: ${choice}`);
-  console.log(`${computerChoice}`);
+
   console.log(`Computer chose: ${computerChoice}`);
 
   if(choice === computerChoice){
@@ -24,13 +32,27 @@ function getHumanChoice () {
   }
   else if((choice === "rock" && computerChoice === "paper") || (choice === "paper" && computerChoice === "scissors") || (choice === "scissors" && computerChoice === "rock")) {
     console.log("you loose");
-
+    computerScore++;
 
   }
   else{
     console.log("you win");
+    humanScore++;
+  }
+
+  if (humanScore === 5){
+    console.log(" Winner is human");
+
+  }else if (computerScore === 5){
+    console.log("Winner is computer");
+
   }
 
 
 }
+}
+/* for (let i = 0; humanScore <=5; i++){
+  console.log("");
 
+}
+ */
